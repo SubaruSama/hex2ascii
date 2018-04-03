@@ -14,6 +14,9 @@ parser.add_argument("-e", "--encode", help="The string will be encoded to hex")
 
 args = parser.parse_args()
 
+if args.decode or args.encode == None:
+	print("Use -h or --help to see the help message")
+
 if args.decode:
 	return_decode(args.decode)
 
